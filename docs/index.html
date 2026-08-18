@@ -1,0 +1,19 @@
+# JUang Privacy Policy Hosting
+
+Prepared public page:
+
+- `docs/privacy-policy.html`
+- `docs/index.html`
+
+Recommended GitHub Pages setup:
+
+1. Create or use a public GitHub repository for JUang release documents.
+2. Copy the contents of this `docs` folder into that repository.
+3. In GitHub repository settings, enable Pages from the `docs` folder or from the branch root if these files are at the root.
+4. Confirm the privacy policy opens as a normal HTTPS page, for example:
+   - `https://<github-user>.github.io/<repo>/privacy-policy.html`
+5. After the real public URL works, update Android config in:
+   - `wallet-control-android/app/src/main/res/values/strings.xml`
+   - string name: `privacy_policy_url`
+
+Do not publish a production Play build while `privacy_policy_url` is empty.
