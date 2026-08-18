@@ -1,19 +1,368 @@
-# JUang Privacy Policy Hosting
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="JUang Privacy Policy" />
+  <title>JUang Privacy Policy</title>
 
-Prepared public page:
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f4f8f6;
+      --card: #ffffff;
+      --text: #18231f;
+      --muted: #66736d;
+      --line: #dfe8e3;
+      --accent: #0f9577;
+      --accent-soft: #e9f6f1;
+    }
 
-- `docs/privacy-policy.html`
-- `docs/index.html`
+    * {
+      box-sizing: border-box;
+    }
 
-Recommended GitHub Pages setup:
+    body {
+      margin: 0;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
 
-1. Create or use a public GitHub repository for JUang release documents.
-2. Copy the contents of this `docs` folder into that repository.
-3. In GitHub repository settings, enable Pages from the `docs` folder or from the branch root if these files are at the root.
-4. Confirm the privacy policy opens as a normal HTTPS page, for example:
-   - `https://<github-user>.github.io/<repo>/privacy-policy.html`
-5. After the real public URL works, update Android config in:
-   - `wallet-control-android/app/src/main/res/values/strings.xml`
-   - string name: `privacy_policy_url`
+    main {
+      width: min(820px, calc(100% - 32px));
+      margin: 40px auto;
+    }
 
-Do not publish a production Play build while `privacy_policy_url` is empty.
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(24, 35, 31, 0.06);
+    }
+
+    .brand {
+      display: inline-block;
+      margin-bottom: 8px;
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0 0 6px;
+      font-size: clamp(2rem, 5vw, 2.8rem);
+      line-height: 1.15;
+    }
+
+    .effective-date {
+      margin: 0 0 30px;
+      color: var(--muted);
+    }
+
+    h2 {
+      margin-top: 34px;
+      margin-bottom: 10px;
+      padding-top: 28px;
+      border-top: 1px solid var(--line);
+      font-size: 1.3rem;
+    }
+
+    p {
+      margin: 0 0 16px;
+    }
+
+    a {
+      color: var(--accent);
+      font-weight: 650;
+    }
+
+    .summary {
+      margin: 24px 0 6px;
+      padding: 18px 20px;
+      border-radius: 14px;
+      background: var(--accent-soft);
+    }
+
+    footer {
+      margin-top: 34px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 640px) {
+      main {
+        width: min(100% - 20px, 820px);
+        margin: 16px auto;
+      }
+
+      .card {
+        padding: 24px 20px;
+        border-radius: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <article class="card">
+      <span class="brand">JUang</span>
+      <h1>Privacy Policy</h1>
+      <p class="effective-date">
+        Effective date: August 18, 2026
+      </p>
+
+      <div class="summary">
+        JUang is a personal finance tracking app for recording income and
+        expenses. This Privacy Policy explains how JUang handles data when you
+        use the app.
+      </div>
+
+      <h2>1. Data stored on your device</h2>
+
+      <p>
+        JUang stores transaction records locally on your device. Records may
+        include transaction dates, descriptions, categories, income or expense
+        type, amounts in Indonesian Rupiah, and generated financial report text.
+      </p>
+
+      <p>
+        JUang does not currently provide a JUang cloud account or backend for
+        storing your financial records.
+      </p>
+
+      <p>
+        Because these records are stored locally, clearing JUang app data or
+        uninstalling the app may permanently remove local records. We recommend
+        exporting important records before clearing app data or uninstalling
+        JUang.
+      </p>
+
+      <h2>2. Photos, receipts, and OCR</h2>
+
+      <p>
+        When you choose or capture a receipt image, JUang may use the image to
+        preview the receipt and recognize text for transaction entry.
+      </p>
+
+      <p>
+        JUang stores transaction text and related metadata locally. Receipt
+        image files are not stored as image data inside JUang's browser
+        localStorage.
+      </p>
+
+      <p>
+        Photos captured using your device camera may remain in your device
+        gallery, including under a folder such as Pictures/JUang depending on
+        your device and Android implementation.
+      </p>
+
+      <p>
+        Deleting a transaction from JUang does not necessarily delete a receipt
+        photo that remains in your device gallery. Gallery files may need to be
+        deleted separately using your device's gallery or file-management tools.
+      </p>
+
+      <h2>3. ML Kit text recognition</h2>
+
+      <p>
+        JUang uses Google ML Kit Text Recognition to read receipt text on-device.
+        Receipt images, recognized receipt text, and financial transaction
+        content are not sent to a JUang server for OCR processing.
+      </p>
+
+      <p>
+        Google ML Kit and related Google services may process limited
+        operational or diagnostic information according to Google's SDK data
+        disclosure documentation and applicable Google policies.
+      </p>
+
+      <h2>4. Voice input</h2>
+
+      <p>
+        When you use the Voice feature, JUang opens the Android speech
+        recognition service available on your device.
+      </p>
+
+      <p>
+        JUang does not force speech recognition to occur only on-device.
+        Depending on your Android device, settings, and configured speech
+        provider, audio may be processed by Google or another speech recognition
+        provider outside JUang.
+      </p>
+
+      <p>
+        JUang receives the resulting transcript and stores it locally only when
+        you choose to save the transaction.
+      </p>
+
+      <h2>5. Advertising</h2>
+
+      <p>
+        JUang uses Google AdMob to display advertising.
+      </p>
+
+      <p>
+        JUang currently uses:
+      </p>
+
+      <ul>
+        <li>a banner advertisement on the Draft screen; and</li>
+        <li>
+          rewarded advertisements that users may voluntarily watch to unlock
+          additional CSV or PDF exports after the applicable free export has
+          been used.
+        </li>
+      </ul>
+
+      <p>
+        Google Mobile Ads SDK may process information such as device
+        information, app interactions, advertising identifiers or other
+        identifiers, and diagnostic information for purposes including ad
+        delivery, measurement, security, and fraud prevention, according to
+        Google's applicable policies.
+      </p>
+
+      <p>
+        JUang does not send your transaction descriptions, merchant names,
+        transaction categories, financial amounts, transaction history, receipt
+        OCR text, or financial report content to AdMob as custom advertising
+        targeting parameters.
+      </p>
+
+      <h2>6. Advertising privacy choices and consent</h2>
+
+      <p>
+        JUang uses Google's User Messaging Platform (UMP) where required to
+        manage advertising consent messages and advertising privacy choices.
+      </p>
+
+      <p>
+        Depending on your location and applicable requirements, Google may
+        provide consent or privacy-choice interfaces relating to advertising.
+        Those choices are handled through Google's consent and advertising
+        systems.
+      </p>
+
+      <h2>7. Data sharing and external services</h2>
+
+      <p>
+        JUang does not currently include a JUang backend, n8n integration,
+        OpenAI integration, Gemini integration, user account system, or separate
+        analytics or crash-reporting SDK.
+      </p>
+
+      <p>
+        JUang's app code does not send your financial transaction records,
+        receipt OCR text, financial reports, or receipt image content to a JUang
+        server.
+      </p>
+
+      <p>
+        Third-party platform or SDK services used by JUang, including Google
+        Mobile Ads, Google ML Kit, Android speech recognition providers, and
+        related Google services, may process data according to their respective
+        policies and technical functions.
+      </p>
+
+      <h2>8. CSV and PDF exports</h2>
+
+      <p>
+        JUang allows you to export your own financial records as CSV or PDF.
+        Exported files are created at your request and are saved to your device
+        or handled through Android's download, file, or print functionality.
+      </p>
+
+      <p>
+        JUang stores local status indicating whether the free CSV export and the
+        free PDF export have been used.
+      </p>
+
+      <p>
+        After the applicable free export has been used, additional exports may
+        be voluntarily unlocked through rewarded advertising.
+      </p>
+
+      <p>
+        Because JUang currently has no user account system, clearing app data or
+        uninstalling JUang may reset locally stored free-export status.
+      </p>
+
+      <h2>9. Data deletion</h2>
+
+      <p>
+        You can delete transaction records from inside JUang using the available
+        transaction-clearing features.
+      </p>
+
+      <p>
+        Clearing JUang app data or uninstalling the application may also remove
+        locally stored transaction records.
+      </p>
+
+      <p>
+        Receipt photos saved separately in your device gallery are not
+        necessarily removed when JUang transactions or app data are deleted.
+        Those files may need to be deleted separately from your device gallery.
+      </p>
+
+      <h2>10. No user accounts</h2>
+
+      <p>
+        JUang does not currently provide user registration, login, cloud
+        profiles, or cloud synchronization of financial records.
+      </p>
+
+      <p>
+        Because JUang does not provide user accounts, there is currently no
+        JUang cloud account or cloud profile to request deletion of.
+      </p>
+
+      <h2>11. Changes to this Privacy Policy</h2>
+
+      <p>
+        We may update this Privacy Policy when JUang's features, data practices,
+        third-party services, or legal requirements change.
+      </p>
+
+      <p>
+        When this policy is updated, the effective date at the top of this page
+        will also be updated.
+      </p>
+
+      <h2>12. Contact</h2>
+
+      <p>
+        If you have questions about this Privacy Policy, privacy, or support
+        related to JUang, contact:
+      </p>
+
+      <p>
+        <strong>SimpleOrbit</strong><br />
+        Email:
+        <a href="mailto:simple.orbit.app@gmail.com">
+          simple.orbit.app@gmail.com
+        </a>
+      </p>
+
+      <footer>
+        JUang is developed and published under the SimpleOrbit developer brand.
+      </footer>
+    </article>
+  </main>
+</body>
+</html>
